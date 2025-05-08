@@ -2,43 +2,46 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Restaurante Dani Bro's - Cocina</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Pedidos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
     <link href="css/style.css" rel="stylesheet">
-
 </head>
 <body>
-    <header>
-        <img src="images/logo.jpg" alt="Logo del Restaurante" class="logo">
-        <h1>Restaurante Dani Bro's - Cocina</h1>
-    </header>
-    
+    <div class="header d-flex justify-content-between align-items-center">
+        <div>
+            <i class="fas fa-utensils me-2"></i>
+            Panel de Pedidos
+            <span class="orders-count" id="orders-count">0</span>
+        </div>
+        <div>
+            <span id="current-time"></span>
+        </div>
+    </div>
 
-    <main>
-        <section class="mesas">
-            <h2>Mesas</h2>
-            <div class="mesa-lista">
-                <button onclick="verPedido(2)">Mesa 2</button>
-                <button onclick="verPedido(6)">Mesa 6</button>
-                <!-- Agrega más botones de mesas si lo deseas -->
+    <div class="container py-4">
+        <div class="row" id="orders-panel">
+            <!-- Los pedidos se cargarán aquí dinámicamente -->
+            <div class="col-12">
+                <div class="no-orders" id="no-orders">
+                    No hay pedidos pendientes
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <button onclick="verPlatillosListos()">🔔 Ver Platillos Listos</button>
+    <div class="footer">
+        Sistema de Pedidos
+    </div>
 
-
-        <section id="pedido-detalles">
-            <h3>Detalles del Pedido</h3>
-            <div id="pedido-info">
-                <p>Selecciona una mesa para ver su pedido.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Restaurante Dani Bro's</p>
-    </footer>
-
+    <!-- jQuery y Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Script personalizado -->
     <script src="js/scripts.js"></script>
 </body>
 </html>
