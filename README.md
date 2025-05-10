@@ -19,5 +19,4 @@ Sistema web para visualizar y gestionar los pedidos realizados por los clientes 
 - Contactar al desarrollador del proyecto
 - Revisar el código comentado en `script.js`
 
-## Autores del proyecto
-- [Allan Daniel Cruz Matias]
+
